@@ -17,10 +17,6 @@ import { showToast } from "./components/ui.js";
             }
 
 
-
-
-
-
             e.preventDefault();
             navigateTo(a.getAttribute("href"));
         });

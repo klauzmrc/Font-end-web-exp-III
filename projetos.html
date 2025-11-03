@@ -4,301 +4,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ONG Pela Vada — Projetos sociais</title>
-    <meta name="description" content="Conheça nossos projetos sociais, oportunidades de voluntariado e como doar.">
-    <style>
-        :root {
-            --bg: #f7fafc;
-            --text: #1a1a1a;
-            --muted: #5f6b76;
-
-            --brand: #155e75;
-            --brand-contrast: #ffffff;
-            --surface: #ffffff;
-            --surface-alt: #e6f0f4;
-            --accent: #0ea5e9;
-            --border: #d7dee5;
-
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.5rem;
-            --space-6: 2rem;
-            --radius: 10px;
-            --max-w: 72rem;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 0 0 var(--space-3);
-            line-height: 1.2;
-        }
-
-        p,
-        ul,
-        figure {
-            margin: 0 0 var(--space-4);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-        }
-
-        .container {
-            width: min(100% - 2rem, var(--max-w));
-            margin-inline: auto;
-        }
-
-
-        header {
-            background: var(--brand);
-            color: var(--brand-contrast);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: var(--space-4);
-            padding: var(--space-4) 0;
-        }
-
-        .branding a {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            color: var(--brand-contrast);
-        }
-
-        nav[aria-label="Navegação principal"] ul {
-            list-style: none;
-            display: flex;
-            gap: var(--space-3);
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        nav[aria-label="Navegação principal"] a {
-            display: inline-block;
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
-            color: var(--brand-contrast);
-        }
-
-        nav[aria-label="Navegação principal"] a[aria-current="page"] {
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-
-        main {
-            padding-block: var(--space-6);
-            background: var(--surface-alt);
-        }
-
-        main>header {
-            background: transparent;
-            color: inherit;
-            padding: 0;
-            margin-bottom: var(--space-5);
-        }
-
-        section {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-5);
-            margin-bottom: var(--space-5);
-        }
-
-        figure {
-            background: #f9fbfd;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-3);
-        }
-
-        figcaption {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin-top: var(--space-2);
-        }
-
-
-        .projects-row {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-5);
-        }
-
-        .project-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-4);
-        }
-
-
-        .info-block {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-4);
-        }
-
-
-        footer {
-            background: var(--brand);
-            color: var(--brand-contrast);
-            padding: var(--space-5) 0;
-            margin-top: var(--space-6);
-        }
-
-        .footer-inner {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-            align-items: flex-start;
-        }
-
-
-        @media (min-width: 768px) {
-            .projects-row {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-
-            .project-card {
-                flex: 1 1 calc(50% - var(--space-5));
-            }
-
-            .footer-inner {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-    </style>
+    <title>ONG Pela Vida — Início</title>
+    <meta name="description"
+        content="Conheça a missão, visão e valores da ONG Pela Vida, entre em contato e veja nossas conquistas.">
+    <link rel="preload" as="image" href="assets/img/hero.png">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <header>
-        <div class="header-inner container">
+<body class="page-grid">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner navbar">
             <div class="branding">
-                <a href="index.html" aria-label="Página inicial">
-                    <img src="assets/img/hero.png" alt="Logotipo da ONG Pela Vida" width="120" height="40">
+                <a data-link href="#/" aria-label="Página inicial">
+                    <img src="assets/img/hero.png" alt="ONG Pela Vida" width="40" height="120">
                 </a>
             </div>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+                Menu
+            </button>
+
             <nav aria-label="Navegação principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                <ul id="menu-principal" class="nav-list">
+                    <li><a class="nav-link" data-link href="#/">Início</a></li>
+                    <li class="has-dropdown">
+                        <a class="nav-link" data-link href="#/projetos" aria-haspopup="true"
+                            aria-expanded="false">Projetos</a>
+                        <div class="dropdown" role="menu" aria-label="Submenu Projetos">
+                            <a data-link href="#/projetos?categoria=educacao" role="menuitem">Educação</a>
+                            <a data-link href="#/projetos?categoria=saude" role="menuitem">Saúde</a>
+                            <a data-link href="#/projetos?categoria=meio-ambiente" role="menuitem">Meio ambiente</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" data-link href="#/cadastro">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <header>
-                <h1>Projetos sociais em andamento</h1>
-                <p>Conheça nossas iniciativas e como você pode participar.</p>
-            </header>
+    <!-- CONTEÚDO SPA -->
+    <main id="app"></main>
 
-            <section aria-labelledby="lista-projetos">
-                <h2 id="lista-projetos">Projetos</h2>
-
-                <div class="projects-row">
-                    <article class="project-card" aria-labelledby="proj-educacao">
-                        <header>
-                            <h3 id="proj-educacao">Educação para o Futuro</h3>
-                        </header>
-                        <figure>
-                            <img src="assets/img/projeto01.png" alt="Crianças em sala com materiais didáticos"
-                                loading="lazy" width="800" height="450">
-                            <figcaption>Aulas de reforço e tecnologia para jovens.</figcaption>
-                        </figure>
-                        <p>Oferece reforço escolar, oficinas de lógica e iniciação em programação.</p>
-                        <ul>
-                            <li><strong>Impacto:</strong> 150 alunos por semestre</li>
-                            <li><strong>Local:</strong> Zona Leste</li>
-                            <li><strong>Categoria:</strong> Educação</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card" aria-labelledby="proj-saude">
-                        <header>
-                            <h3 id="proj-saude">Saúde em Movimento</h3>
-                        </header>
-                        <figure>
-                            <img src="assets/img/projeto02.png" alt="Equipe de saúde em comunidade" loading="lazy"
-                                width="800" height="450">
-                            <figcaption>Atendimentos básicos e campanhas de prevenção.</figcaption>
-                        </figure>
-                        <p>Realiza triagens, orientações e encaminhamentos em comunidades.</p>
-                        <ul>
-                            <li><strong>Impacto:</strong> 500 atendimentos/ano</li>
-                            <li><strong>Local:</strong> Zona Norte</li>
-                            <li><strong>Categoria:</strong> Saúde</li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
-
-            <section class="info-block" aria-labelledby="voluntariado">
-                <h2 id="voluntariado">Voluntariado</h2>
-                <p>Descubra oportunidades de voluntariado e candidate-se:</p>
-                <ul>
-                    <li>Monitoria de reforço escolar</li>
-                    <li>Mentoria em tecnologia</li>
-                    <li>Apoio em triagens de saúde</li>
-                </ul>
-                <p>Para participar, acesse a página <a href="cadastro.html">Cadastro</a> e preencha seus dados.</p>
-            </section>
-
-            <section class="info-block" aria-labelledby="doacoes">
-                <h2 id="doacoes">Como doar</h2>
-                <p>Você pode apoiar nossos projetos com doações financeiras ou de materiais.</p>
-                <p><strong>Opções:</strong> PIX, cartão, boleto ou doações recorrentes.</p>
-                <p>Transparência total com relatórios periódicos publicados na página inicial.</p>
-            </section>
-        </div>
-    </main>
-
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
         <div class="container footer-inner">
-            <p>&copy; <span id="ano">2025</span> ONG Pela Vida. Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; <span id="ano">2025</span> ONG Pela Vida. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/js-script.js" defer></script>
+    <!-- JS (SPA) -->
+    <script type="module" src="js/app.js"></script>
+
+    <noscript>
+        Por favor, habilite JavaScript para navegar pelo site. Sem JS, a navegação SPA não funciona.
+    </noscript>
 </body>
 
 </html>

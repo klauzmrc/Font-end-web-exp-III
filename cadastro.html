@@ -4,431 +4,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ONG Pela Vida — Cadastro</title>
-    <meta name="description" content="Cadastre-se como voluntário ou apoiador.">
-    <style>
-        :root {
-            --bg: #f7fafc;
-            --text: #1a1a1a;
-            --muted: #5f6b76;
-
-            --brand: #155e75;
-            --brand-contrast: #ffffff;
-            --surface: #ffffff;
-            --surface-alt: #e6f0f4;
-            --accent: #0ea5e9;
-            --border: #d7dee5;
-
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.5rem;
-            --space-6: 2rem;
-            --radius: 10px;
-            --max-w: 72rem;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 0 0 var(--space-3);
-            line-height: 1.2;
-        }
-
-        p,
-        ul,
-        figure {
-            margin: 0 0 var(--space-4);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-        }
-
-        .container {
-            width: min(100% - 2rem, var(--max-w));
-            margin-inline: auto;
-        }
-
-
-        header {
-            background: var(--brand);
-            color: var(--brand-contrast);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: var(--space-4);
-            padding: var(--space-4) 0;
-        }
-
-        .branding a {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            color: var(--brand-contrast);
-        }
-
-        nav[aria-label="Navegação principal"] ul {
-            list-style: none;
-            display: flex;
-            gap: var(--space-3);
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        nav[aria-label="Navegação principal"] a {
-            display: inline-block;
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
-            color: var(--brand-contrast);
-        }
-
-        nav[aria-label="Navegação principal"] a[aria-current="page"] {
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-
-        main {
-            padding-block: var(--space-6);
-            background: var(--surface-alt);
-        }
-
-        main>header {
-            background: transparent;
-            color: inherit;
-            padding: 0;
-            margin-bottom: var(--space-5);
-        }
-
-        section {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-5);
-            margin-bottom: var(--space-5);
-        }
-
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-5);
-            background: var(--surface);
-        }
-
-        fieldset {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-4);
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-4);
-        }
-
-        legend {
-            padding: 0 var(--space-2);
-            font-weight: 600;
-        }
-
-
-        fieldset>div {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
-            flex: 1 1 100%;
-            min-width: 240px;
-        }
-
-        label {
-            font-weight: 600;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 0.75rem 0.875rem;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--surface);
-            color: var(--text);
-            font: inherit;
-            line-height: 1.4;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: var(--muted);
-        }
-
-        small {
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-
-        input:invalid,
-        select:invalid,
-        textarea:invalid {
-            border-color: #c62828;
-        }
-
-        input:valid {
-            border-color: #2e7d32;
-        }
-
-
-        button {
-            align-self: flex-start;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-2);
-            padding: 0.75rem 1rem;
-            border: 1px solid transparent;
-            border-radius: calc(var(--radius) - 2px);
-            background: var(--brand);
-            color: var(--brand-contrast);
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: 0.95;
-        }
-
-        #status-form {
-            font-weight: 600;
-            color: var(--muted);
-        }
-
-
-        footer {
-            background: var(--brand);
-            color: var(--brand-contrast);
-            padding: var(--space-5) 0;
-            margin-top: var(--space-6);
-        }
-
-        .footer-inner {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-            align-items: flex-start;
-        }
-
-
-        @media (min-width: 768px) {
-
-            fieldset>div {
-                flex: 1 1 calc(50% - var(--space-4));
-            }
-
-
-            #endereco,
-            #mensagem {
-                width: 100%;
-            }
-
-            .footer-inner {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-    </style>
+    <title>ONG Pela Vida — Início</title>
+    <meta name="description"
+        content="Conheça a missão, visão e valores da ONG Pela Vida, entre em contato e veja nossas conquistas.">
+    <link rel="preload" as="image" href="assets/img/hero.png">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <header>
-        <div class="header-inner container">
+<body class="page-grid">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner navbar">
             <div class="branding">
-                <a href="index.html" aria-label="Página inicial">
-                    <img src="assets/img/hero.png" alt="Logotipo da ONG Pela Vida" width="120" height="40">
+                <a data-link href="#/" aria-label="Página inicial">
+                    <img src="assets/img/hero.png" alt="ONG Pela Vida" width="40" height="120">
                 </a>
             </div>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+                Menu
+            </button>
+
             <nav aria-label="Navegação principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+                <ul id="menu-principal" class="nav-list">
+                    <li><a class="nav-link" data-link href="#/">Início</a></li>
+                    <li class="has-dropdown">
+                        <a class="nav-link" data-link href="#/projetos" aria-haspopup="true"
+                            aria-expanded="false">Projetos</a>
+                        <div class="dropdown" role="menu" aria-label="Submenu Projetos">
+                            <a data-link href="#/projetos?categoria=educacao" role="menuitem">Educação</a>
+                            <a data-link href="#/projetos?categoria=saude" role="menuitem">Saúde</a>
+                            <a data-link href="#/projetos?categoria=meio-ambiente" role="menuitem">Meio ambiente</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" data-link href="#/cadastro">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <header>
-                <h1>Cadastro</h1>
-                <p>Preencha seus dados para se candidatar ao voluntariado ou receber novidades.</p>
-            </header>
+    <!-- CONTEÚDO SPA -->
+    <main id="app"></main>
 
-            <section aria-labelledby="form-cadastro">
-                <h2 id="form-cadastro">Dados pessoais</h2>
-
-                <form action="#" method="post" novalidate="false">
-                    <fieldset>
-                        <legend>Identificação</legend>
-
-                        <div>
-                            <label for="nome">Nome completo</label>
-                            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" autocomplete="name"
-                                required>
-                        </div>
-
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com"
-                                autocomplete="email" required>
-                        </div>
-
-                        <div>
-                            <label for="cpf">CPF</label>
-                            <input id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00"
-                                maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" aria-describedby="dica-cpf" required>
-                            <small id="dica-cpf">Formato: 000.000.000-00</small>
-                        </div>
-
-                        <div>
-                            <label for="telefone">Telefone</label>
-                            <input id="telefone" name="telefone" type="tel" inputmode="tel"
-                                placeholder="(00) 00000-0000" maxlength="15" pattern="\(\d{2}\)\s\d{5}-\d{4}"
-                                aria-describedby="dica-fone" required>
-                            <small id="dica-fone">Formato: (00) 00000-0000</small>
-                        </div>
-
-                        <div>
-                            <label for="nascimento">Data de nascimento</label>
-                            <input id="nascimento" name="nascimento" type="date" max="2100-12-31" required>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Endereço</legend>
-
-                        <div>
-                            <label for="endereco">Endereço</label>
-                            <input id="endereco" name="endereco" type="text" placeholder="Rua, número e complemento"
-                                autocomplete="street-address" required>
-                        </div>
-
-                        <div>
-                            <label for="cep">CEP</label>
-                            <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000"
-                                maxlength="9" pattern="\d{5}-\d{3}" aria-describedby="dica-cep" required>
-                            <small id="dica-cep">Formato: 00000-000</small>
-                        </div>
-
-                        <div>
-                            <label for="cidade">Cidade</label>
-                            <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
-                        </div>
-
-                        <div>
-                            <label for="estado">Estado (UF)</label>
-                            <select id="estado" name="estado" autocomplete="address-level1" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option>AC</option>
-                                <option>AL</option>
-                                <option>AP</option>
-                                <option>AM</option>
-                                <option>BA</option>
-                                <option>CE</option>
-                                <option>DF</option>
-                                <option>ES</option>
-                                <option>GO</option>
-                                <option>MA</option>
-                                <option>MT</option>
-                                <option>MS</option>
-                                <option>MG</option>
-                                <option>PA</option>
-                                <option>PB</option>
-                                <option>PR</option>
-                                <option>PE</option>
-                                <option>PI</option>
-                                <option>RJ</option>
-                                <option>RN</option>
-                                <option>RS</option>
-                                <option>RO</option>
-                                <option>RR</option>
-                                <option>SC</option>
-                                <option>SP</option>
-                                <option>SE</option>
-                                <option>TO</option>
-                            </select>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Interesse</legend>
-
-                        <div>
-                            <label for="papel">Quero me cadastrar como</label>
-                            <select id="papel" name="papel" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="voluntario">Voluntário</option>
-                                <option value="doador">Doador/Apoiador</option>
-                                <option value="ambos">Ambos</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="mensagem">Mensagem (opcional)</label>
-                            <textarea id="mensagem" name="mensagem" rows="4"
-                                placeholder="Conte brevemente seu interesse..."></textarea>
-                        </div>
-                    </fieldset>
-
-                    <div>
-                        <button type="submit">Enviar cadastro</button>
-                    </div>
-
-                    <div aria-live="polite" id="status-form"></div>
-                </form>
-            </section>
-        </div>
-    </main>
-
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
         <div class="container footer-inner">
-            <p>&copy; <span id="ano">2025</span> ONG Exemplo. Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; <span id="ano">2025</span> ONG Pela Vida. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/js-script.js" defer></script>
+    <!-- JS (SPA) -->
+    <script type="module" src="js/app.js"></script>
+
+    <noscript>
+        Por favor, habilite JavaScript para navegar pelo site. Sem JS, a navegação SPA não funciona.
+    </noscript>
 </body>
 
 </html>
