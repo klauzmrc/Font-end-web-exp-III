@@ -1,0 +1,40 @@
+/* grid.css */
+
+/* Layout principal com CSS Grid (header, main, footer) */
+.page-grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
+
+/* Grid 12 colunas para conteúdo interno */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-2);
+}
+
+/* Helpers de colunas */
+.col-12 { grid-column: span 12; }
+.col-6  { grid-column: span 12; }
+.col-4  { grid-column: span 12; }
+.col-3  { grid-column: span 12; }
+
+@media (min-width: var(--bp-lg)) {
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    .col-3 { grid-column: span 3; }
+}
+
+/* seções específicas */
+.grid-cards {
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: 1fr;
+}
+@media (min-width: var(--bp-md)) {
+    .grid-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: var(--bp-xl)) {
+    .grid-cards { grid-template-columns: repeat(3, 1fr); }
+}

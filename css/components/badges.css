@@ -1,0 +1,21 @@
+/* components/badges.css */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-size: var(--fs-sm);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+}
+
+.badge--edu { background: color-mix(in oklab, var(--color-accent) 15%, #2e4d61e3); }
+.badge--saude { background: color-mix(in oklab, var(--color-accent) 15%, #2e4d61e3); }
+.badge--ambiente { background: color-mix(in oklab, var(--color-accent) 15%, #2e4d61e3); }

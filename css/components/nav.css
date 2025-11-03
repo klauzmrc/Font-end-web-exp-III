@@ -1,0 +1,80 @@
+/* components/nav.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+}
+
+.nav-list {
+    list-style: none;
+    display: none;                 /* mobile: oculto até abrir */
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+.nav-link[aria-current="page"] {
+    background: rgba(255,255,255,0.18);
+}
+
+/* Dropdown */
+.has-dropdown {
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    padding: var(--space-2);
+    display: none;
+    z-index: 10;
+}
+.dropdown a {
+    color: var(--color-text);
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+.dropdown a:hover { background: var(--color-surface-alt); }
+
+/* Botão hambúrguer */
+.nav-toggle {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.6);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Estados controlados por classe (via JS) */
+.nav-open .nav-list { display: flex; }
+.show-dropdown .dropdown { display: block; }
+
+/* Desktop */
+@media (min-width: var(--bp-lg)) {
+    .nav-toggle { display: none; }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-2);
+    }
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown {
+        display: block;
+    }
+}

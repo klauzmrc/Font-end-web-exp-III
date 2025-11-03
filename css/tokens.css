@@ -1,0 +1,63 @@
+/* tokens.css */
+:root {
+    /* Paleta */
+    --color-primary: #155e75;         /* marca */
+    --color-secondary: #0ea5e9;       /* detalhe/ação secundária */
+    --color-accent: #22c55e;          /* sucesso */
+    --color-info: #3b82f6;            /* informativo */
+    --color-warning: #f59e0b;         /* aviso */
+    --color-danger: #ef4444;          /* erro */
+    --color-surface: #ffffff;         /* cartões */
+    --color-surface-alt: #e6f0f4;     /* fundo de seções */
+    --color-bg: #f7fafc;              /* fundo base */
+    --color-text: #1a1a1a;
+    --color-muted: #5f6b76;
+    --color-border: #d7dee5;
+
+    /* Tipografia */
+    --font-base: 16px;
+    --fs-xs: 0.75rem;    /* 12px */
+    --fs-sm: 0.875rem;   /* 14px */
+    --fs-md: 1rem;       /* 16px */
+    --fs-lg: 1.25rem;    /* 20px */
+    --fs-xl: 1.5rem;     /* 24px */
+    --fs-2xl: 2rem;      /* 32px */
+    --fs-3xl: 2.5rem;    /* 40px */
+
+    /* Espaçamentos modulares  */
+    --space-1: 0.5rem;   /* 8px */
+    --space-2: 1rem;     /* 16px */
+    --space-3: 1.5rem;   /* 24px */
+    --space-4: 2rem;     /* 32px */
+    --space-5: 3rem;     /* 48px */
+    --space-6: 4rem;     /* 64px */
+
+    /* Bordas e sombras */
+    --radius: 10px;
+    --shadow-1: 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-2: 0 8px 24px rgba(0,0,0,0.10);
+
+    /* Largura máxima */
+    --max-w: 72rem;
+
+    /* Breakpoints */
+    --bp-xs: 360px;
+    --bp-sm: 480px;
+    --bp-md: 640px;
+    --bp-lg: 768px;
+    --bp-xl: 1024px;
+    --bp-2xl: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #0e7490;
+        --color-secondary: #38bdf8;
+        --color-surface: #0e141a;
+        --color-surface-alt: #0b0f14;
+        --color-bg: #0b0f14;
+        --color-text: #e6edf3;
+        --color-muted: #9aa7b1;
+        --color-border: #1f2730;
+    }
+}

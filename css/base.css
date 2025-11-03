@@ -1,0 +1,62 @@
+/* base.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: var(--font-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+}
+
+img, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 0 var(--space-2);
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p, ul, ol, figure {
+    margin: 0 0 var(--space-2);
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+    outline: 3px solid var(--color-warning);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.container {
+    width: min(100% - 2rem, var(--max-w));
+    margin-inline: auto;
+}
